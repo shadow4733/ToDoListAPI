@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface TaskRepository extends JpaRepository<Task,Long> {
 
-    List<Task> findByStatus(boolean completed);
+    List<Task> findByStatus(String completed);
 
     List<Task> findByTitleContainingIgnoreCase(String keyword);
 
